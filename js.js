@@ -20,17 +20,30 @@ const api = async (name) => {
         //create elements
         const image = create('img'),
             name = create('h2'),
-            statu = create('h4'),
-            specie = create('h4'),
-            container = create('div');
+            statu = create('h3'),
+            specie = create('h3'),
+            location = create('h3'),
+            genero = create('h3')
+            cardFront = create('div'),
+            cardBack = create('div')
+            container = create('div'),
+
+            
         //add attr to elements    
-        container.classList.add('card')
+        cardFront.classList.add('card', 'front')
+        cardBack.classList.add('card', 'back')
+        container.classList.add('container', 'container-cards')
         image.src = el.image
         name.textContent = el.name
-        statu.textContent = el.status
-        specie.textContent = el.species
+        statu.textContent = `Status: ${el.status}`
+        specie.textContent = `Species: ${el.species}`
+        location.textContent = `Location: ${el.location.name}`
+        genero.textContent = `Gender: ${el.gender}`
         
-        agregar({ image, name, statu, specie, }, container)
+        agregar({ image, name }, cardFront)
+        agregar({ statu, specie, location, genero }, cardBack)
+        container.appendChild(cardFront)
+        container.appendChild(cardBack)
         fragment.appendChild(container)
     })
     div.appendChild(fragment)
