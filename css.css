@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.2rem;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.search {
+    max-width: 450px;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: white;
+    
+}
+
+.search input {
+    border: none;
+    width: 80%;
+    height: 100%;
+    border-radius: 50px;
+    font-size: 30px;
+    font-family: inherit;
+    padding: 10px;
+}
+
+.search input:focus {
+    border: none;
+    outline: none;
+}
+
+.search button{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+}
+
+
+.card {
+    margin: 20px;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(94.3deg, rgba(26, 33, 64, 1) 10.9%, rgba(81, 84, 115, 1) 87.1%);
+    border-radius: 10px;
+    color: white;
+}
+
+.card>* {
+    margin: 5px;
+}
+
+.card img {
+    clip-path: circle(150px);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
